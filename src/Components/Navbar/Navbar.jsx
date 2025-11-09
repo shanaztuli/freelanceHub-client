@@ -1,10 +1,13 @@
 import React from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import logo from '/logos.png'
-
+import { AuthContext } from "../../AuthContext/AuthProvider";
+import { use } from "react";
+import { toast } from "react-toastify";
+import userLogo from '../../assets/user.png'
 
 const Navbar = () => {
-
+const { user, logOut, loading } = use(AuthContext);
 
 
 
@@ -60,7 +63,16 @@ const Navbar = () => {
       </li>
     </>
   );
-  //
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast("You signed out");
+        navigate('/');
+      })
+      .catch((error) => {
+        toast("Error happened here:", error);
+      });
+  };
  
   return (
     <div className="navbar bg-base-100 shadow-sm ">
@@ -94,7 +106,7 @@ const Navbar = () => {
         <div>
           <div className="flex gap-1">
             <img className="h-10" src={logo} alt="" />
-            <h1 className=" text-2xl font-bold text-blue-500 ">
+            <h1 className=" text-2xl md:text-3xl font-bold text-blue-500 ">
               Freelance <span className="text">Hub</span>
             </h1>
           </div>
@@ -104,7 +116,33 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 ml-5 gap-x-6">{links}</ul>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-primary "> Logout</button>
+        {user && (
+          <img
+            className="w-13 h-13 mr-2 rounded-full"
+            src={user.photoURL}
+            title={user.displayName}
+            alt="userLogo"
+          />
+        )}
+        {user ? (
+          <>
+            <button onClick={handleLogOut} className="btn btn-primary">
+              {" "}
+              Logout
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/auth/login" className="btn btn-primary ">
+              {" "}
+              Login
+            </Link>
+            <Link to="/auth/register" className="btn ml-2  ">
+              {" "}
+              Register
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

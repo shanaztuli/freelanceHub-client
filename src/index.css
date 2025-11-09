@@ -9,7 +9,7 @@
 }  
 
 .btn-primary {
-  @apply bg-gradient-to-r from-[#4777de] via-[#2a59d9] to-[#155dfc] 
+  @apply bg-gradient-to-r from-[hsl(251,84%,66%)] via-[#2a59d9] to-[#155dfc] 
          text-white font-medium border-none 
          shadow-md hover:shadow-lg transition-all duration-300 
          hover:from-[#1e40af] hover:via-[#1e3a8a] hover:to-[#172554];

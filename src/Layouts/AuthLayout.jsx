@@ -5,17 +5,14 @@ import Navbar from '../Components/Navbar/Navbar';
 
 const AuthLayout = () => {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex max-w-[1400px] mx-auto flex-col ">
         <header>
           <Navbar></Navbar>
         </header>
-        <main className=" w-full px-4 md:px-0 pb-4 md:pb-8 flex-1 bg-base-200">
-         
-            <Outlet></Outlet>
-          
+        <main className="px-4 md:px-0 md:pb-8  md:flex-1 bg-base-200">
+          <Outlet></Outlet>
         </main>
         <footer>
-      
           <Footer></Footer>
         </footer>
       </div>
