@@ -19,6 +19,7 @@ import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
      children: [
        {
          index: true,
+         loader: () => fetch("http://localhost:5001/latest-jobs"),
 
          Component: Home,
        },
