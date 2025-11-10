@@ -5,7 +5,7 @@ const AboutPlatform = () => {
   return (
     <section className="py-10 ">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
-        {/* Left: Image */}
+       
         <div className="md:w-1/2">
           <img
             src={

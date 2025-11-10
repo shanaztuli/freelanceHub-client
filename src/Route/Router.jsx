@@ -19,25 +19,22 @@ import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
      children: [
        {
          index: true,
-       
+
          Component: Home,
        },
        {
          path: "/allJobs",
+         loader: () => fetch("http://localhost:5001/jobs"),
          Component: AllJobs,
        },
 
        {
          path: "/addJobs",
-         element: 
-         
-             <AddJobs></AddJobs>,
-          
-       
+         element: <AddJobs></AddJobs>,
        },
        {
          path: "/myAcceptedTasks",
-         element:<MyAcceptedTasks></MyAcceptedTasks>
+         element: <MyAcceptedTasks></MyAcceptedTasks>,
        },
      ],
    },
@@ -57,8 +54,8 @@ import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
      ],
    },
    {
-    path:'/*',
-    element: <NotFound></NotFound>
-   }
+     path: "/*",
+     element: <NotFound></NotFound>,
+   },
  ]);
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import bannerIllustration from "/bannerIllustration.png"; // replace with your image path
+
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {

@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "freelance-hub-45dbb",
   storageBucket: "freelance-hub-45dbb.firebasestorage.app",
   messagingSenderId: "948778330141",
-  appId: "1:948778330141:web:a2c63a6f89cd50108d3ef4",
+  appId: "1:948778330141:web:391f8e034a1d5ec98d3ef4",
 };
 
 // Initialize Firebase

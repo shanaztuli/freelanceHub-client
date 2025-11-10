@@ -1,0 +1,161 @@
+[
+  {
+    "title": "Front-End Web Developer",
+    "postedBy": "Alice Johnson",
+    "category": "Web Development",
+    "summary": "Looking for a skilled front-end developer to build responsive web pages using React and Tailwind CSS.",
+    "coverImage": "https://plus.unsplash.com/premium_photo-1675793715030-0584c8ec4a13?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8RnJvbnQtRW5kJTIwV2ViJTIwRGV2ZWxvcGVyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "alice@example.com"
+  },
+  {
+    "title": "SEO Specialist",
+    "postedBy": "Bob Smith",
+    "category": "Digital Marketing",
+    "summary": "Seeking an SEO expert to improve website ranking and optimize content for search engines.",
+    "coverImage": "https://plus.unsplash.com/premium_photo-1685283298465-e52e933a3312?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025",
+    "userEmail": "bob@example.com"
+  },
+  {
+    "title": "Graphic Designer",
+    "postedBy": "Clara Williams",
+    "category": "Graphics Designing",
+    "summary": "Need a creative designer to produce stunning visuals for social media and marketing campaigns.",
+    "coverImage": "https://images.unsplash.com/photo-1605106250963-ffda6d2a4b32?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z3JhcGhpY3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "clara@example.com"
+  },
+  {
+    "title": "Content Writer",
+    "postedBy": "David Lee",
+    "category": "Writing & Translation",
+    "summary": "Looking for a talented writer to create blog posts, articles, and website content.",
+    "coverImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8V3JpdGVyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "david@example.com"
+  },
+  {
+    "title": "UI/UX Designer",
+    "postedBy": "Emma Brown",
+    "category": "Graphics Designing",
+    "summary": "Need a UX designer to create intuitive and engaging user interfaces for our mobile app.",
+    "coverImage": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8RGVzaWduZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000"
+  },
+  {
+    "title": "Full-Stack Developer",
+    "postedBy": "Frank Miller",
+    "category": "Web Development",
+    "summary": "Seeking a full-stack developer experienced in Node.js, Express, and MongoDB.",
+    "coverImage": "https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RGVzaWduZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "frank@example.com"
+  },
+  {
+    "title": "Social Media Manager",
+    "postedBy": "Grace Wilson",
+    "category": "Digital Marketing",
+    "summary": "Looking for someone to manage social media accounts and create engaging content.",
+    "coverImage": "https://images.unsplash.com/photo-1605826832916-d0ea9d6fe71e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZWRpdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "grace@example.com"
+  },
+  {
+    "title": "Video Editor",
+    "postedBy": "Henry Davis",
+    "category": "Video & Animation",
+    "summary": "Need a skilled video editor to produce high-quality promotional videos.",
+    "coverImage": "https://images.unsplash.com/photo-1636971828014-0f3493cba88a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWRpdG9yfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "henry@example.com"
+  },
+  {
+    "title": "Mobile App Developer",
+    "postedBy": "Ivy Martinez",
+    "category": "Web Development",
+    "summary": "Looking for a developer to build iOS and Android apps using React Native or Flutter.",
+    "coverImage": "https://plus.unsplash.com/premium_photo-1661668324291-b6cbfe818c1d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIzfHx8ZW58MHx8fHx8&auto=format&fit=crop&q=60&w=500",
+    "userEmail": "ivy@example.com"
+  },
+  {
+    "title": "Email Marketing Specialist",
+    "postedBy": "Jack Thompson",
+    "category": "Digital Marketing",
+    "summary": "Need an expert in email campaigns, newsletters, and marketing automation.",
+    "coverImage": "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RGlnaXRhbCUyME1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "jack@example.com"
+  },
+  {
+    "title": "Illustrator",
+    "postedBy": "Karen Scott",
+    "category": "Graphics Designing",
+    "summary": "Looking for an illustrator to create original artwork for publications and digital media.",
+    "coverImage": "https://images.unsplash.com/photo-1675119715594-30fde4bd3dbc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SWxsdXN0cmF0b3J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "karen@example.com"
+  },
+  {
+    "title": "Copywriter",
+    "postedBy": "Leo Anderson",
+    "category": "Writing & Translation",
+    "summary": "Seeking a creative copywriter to craft persuasive marketing content.",
+    "coverImage": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d3JpdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "leo@example.com"
+  },
+  {
+    "title": "Backend Developer",
+    "postedBy": "Mia Rodriguez",
+    "category": "Web Development",
+    "summary": "Looking for a backend developer skilled in Node.js, Express, and database integration.",
+    "coverImage": "https://plus.unsplash.com/premium_photo-1685086785054-d047cdc0e525?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8V2ViJTIwRGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "mia@example.com"
+  },
+  {
+    "title": "Animator",
+    "postedBy": "Nathan Perez",
+    "category": "Video & Animation",
+    "summary": "Need a creative animator to produce engaging motion graphics and animated videos.",
+    "coverImage": "https://plus.unsplash.com/premium_photo-1723525545606-22c9a69b4e95?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QW5pbWF0b3IlMjBqb2J8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "nathan@example.com"
+  },
+  {
+    "title": "Translator",
+    "postedBy": "Olivia White",
+    "category": "Writing & Translation",
+    "summary": "Looking for a translator fluent in multiple languages for document and website translation.",
+    "coverImage": "https://media.istockphoto.com/id/1354627419/photo/young-woman-working-from-home.jpg?s=612x612&w=is&k=20&c=aAR63_cEcqhLXu_eWmTBzLj57XTAM9l-vI7W2B-7fWk=",
+    "userEmail": "olivia@example.com"
+  },
+  {
+    "title": "Brand Strategist",
+    "postedBy": "Paul Harris",
+    "category": "Digital Marketing",
+    "summary": "Seeking a marketing expert to develop and execute brand strategies for our clients.",
+    "coverImage": "https://plus.unsplash.com/premium_vector-1683141147347-c6aa70127df2?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=352&dpr=2&h=367",
+    "userEmail": "paul@example.com"
+  },
+  {
+    "title": "3D Designer",
+    "postedBy": "Quinn Lewis",
+    "category": "Graphics Designing",
+    "summary": "Need a 3D designer to create realistic 3D models and renders for products and projects.",
+    "coverImage": "https://plus.unsplash.com/premium_vector-1683141289162-aee04a089e71?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=352&dpr=2&h=367",
+    "userEmail": "quinn@example.com"
+  },
+  {
+    "title": "Podcast Editor",
+    "postedBy": "Rachel Young",
+    "category": "Music & Audio",
+    "summary": "Looking for an editor to produce, mix, and finalize high-quality podcasts.",
+    "coverImage": "https://images.unsplash.com/photo-1572119244337-bcb4aae995af?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TXVzaWMlMjAlMjYlMjBBdWRpb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "rachel@example.com"
+  },
+  {
+    "title": "WordPress Developer",
+    "postedBy": "Sam King",
+    "category": "Web Development",
+    "summary": "Seeking a WordPress developer to build and customize websites and plugins.",
+    "coverImage": "https://images.unsplash.com/photo-1678341859828-bfb1a2bd527a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29yZHByZXNzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "sam@example.com"
+  },
+  {
+    "title": "Social Media Designer",
+    "postedBy": "Tina Green",
+    "category": "Graphics Designing",
+    "summary": "Need a designer to create visually appealing social media posts and banners.",
+    "coverImage": "https://images.unsplash.com/photo-1753164597497-50f054745816?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFNvY2lhbCUyME1lZGlhJTIwRGVzaWduZXIlMjJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=1000",
+    "userEmail": "tina@example.com"
+  }
+]

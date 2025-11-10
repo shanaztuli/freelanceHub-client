@@ -12,22 +12,11 @@ const Login = () => {
 
   const { googleSignIn, logIn, setUser } = use(AuthContext);
   const [show, setShow] = useState(false);
+    const [email, setEmail] = useState("");
+
   const navigate = useNavigate();
   const location = useLocation();
-  const [email, setEmail] = useState("");
-  const handleGoogleSignIn = () => {
-    googleSignIn()
-      .then((result) => {
-        const loggedInUser = result.user;
-        setUser(loggedInUser);
-        toast("You Login Successfully", result.user);
-
-        navigate(`${location.state ? location.state : "/"}`);
-      })
-      .catch((error) => {
-        toast(error.message);
-      });
-  };
+ 
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -38,16 +27,32 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
 
-        // console.log(user);
-
-        toast.success("You Registered Successfully!", user);
+        console.log(user);
+        setUser(user);
+        e.target.reset();
+      
+        toast.success("You Login Successfully!", user);
+        
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         toast('something went wrong',error);
       });
   };
-  //
+  
+   const handleGoogleSignIn = () => {
+     googleSignIn()
+       .then((result) => {
+         const loggedInUser = result.user;
+         setUser(loggedInUser);
+         toast("You Login Successfully", result.user);
+
+         navigate(`${location.state ? location.state : "/"}`);
+       })
+       .catch((error) => {
+         toast(error.message);
+       });
+   };
  
 
 
@@ -96,13 +101,13 @@ const Login = () => {
             <div >Forget Password?</div>
 
               <button
-                type="submit"
+                // type="submit"
                 className="btn btn-primary mt-3"
               >
                 Login
               </button>
               <button
-                type="submit"
+              
                 onClick={handleGoogleSignIn}
                 className="btn bg-linear-to-r from-[#f4f3f1] to-[#f8f1e6]  btn-outline w-full"
               >
