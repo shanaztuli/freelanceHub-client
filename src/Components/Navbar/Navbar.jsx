@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink, useNavigate } from "react-router";
+import { Link, Navigate, NavLink, useNavigate } from "react-router";
 import logo from '/logos.png'
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { use } from "react";
@@ -49,29 +49,43 @@ const { user, logOut, loading } = use(AuthContext);
           Add Jobs
         </NavLink>
       </li>
-      <li className="ml-2 font-bold">
-        <NavLink
-          to={"/myAcceptedTasks"}
-          className={({ isActive }) =>
-            isActive
-              ? "text-blue-200 font-semibold bg-blue-600 rounded-[5px] "
-              : ""
-          }
-        >
-          My Accepted Tasks
-        </NavLink>
-      </li>
+      {user && (
+        <>
+          <li className="ml-2 font-bold">
+            <NavLink
+              to={"/myAcceptedTasks"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-200 font-semibold bg-blue-600 rounded-[5px] "
+                  : ""
+              }
+            >
+              My Accepted Tasks
+            </NavLink>
+          </li>
+          <li className="ml-2 font-bold">
+            <NavLink
+              to={"/myAddedJobs"}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-200 font-semibold bg-blue-600 rounded-[5px] "
+                  : ""
+              }
+            >
+              My Added Jobs
+            </NavLink>
+          </li>
+        </>
+      )}
     </>
   );
   const handleLogOut = () => {
     logOut()
       .then(() => {
         toast("You signed out");
-        navigate('/');
+        Navigate('/');
       })
-      .catch((error) => {
-        toast("Error happened here:", error);
-      });
+      .catch();
   };
  
   return (

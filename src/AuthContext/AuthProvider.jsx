@@ -15,6 +15,7 @@ import {
 import App from "../App";
 import { useState } from "react";
 import { useEffect } from "react";
+import Spinner from "../Components/Spinner.jsx/Spinner";
 const auth = getAuth(app);
 
 export const AuthContext = createContext();
@@ -33,6 +34,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logIn = (email, password) => {
+    console.log(email,password);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -49,6 +51,13 @@ const AuthProvider = ({ children }) => {
       unSubscribe();
     };
   }, []);
+
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <Spinner></Spinner>
+      </div>
+    );}
 
   const authData = {
     user,

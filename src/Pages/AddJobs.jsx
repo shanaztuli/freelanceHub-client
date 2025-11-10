@@ -29,7 +29,7 @@ fetch("http://localhost:5001/jobs", {
     console.log(data)
     toast('You sussceefully added The Job');
 }).catch(error =>{
-    toast(error);
+    toast('Please Make sure you provided all Information correctly' ,   error);
 })
    
     form.reset();
@@ -124,7 +124,7 @@ fetch("http://localhost:5001/jobs", {
             />
           </div>
 
-          {/* Submit Button */}
+          {/*  Button */}
           <button
             type="submit"
             className="btn w-full btn-primary hover:bg-blue-700 text-white font-bold py-3 rounded-2xl transition-colors"

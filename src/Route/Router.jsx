@@ -11,6 +11,8 @@ import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import NotFound from "../Pages/NotFound";
 import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
+import JobDetails from "../Pages/JobDetails";
+import MyAddedJobs from "../Pages/MyAddedJobs";
 
  export const router = createBrowserRouter([
    {
@@ -21,28 +23,54 @@ import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
          index: true,
          loader: () => fetch("http://localhost:5001/latest-jobs"),
 
-         Component: Home,
+       element:<Home></Home>
        },
        {
          path: "/allJobs",
          loader: () => fetch("http://localhost:5001/jobs"),
-         Component: AllJobs,
+        element:<AllJobs></AllJobs>
+       },
+       {
+         path: "/jobDetails/:id",
+         loader: ({ params }) =>
+           fetch(`http://localhost:5001/jobs/${params.id}`),
+         element: (
+           <PrivateRoute>
+             <JobDetails></JobDetails>
+           </PrivateRoute>
+         ),
        },
 
        {
          path: "/addJobs",
-         element: <AddJobs></AddJobs>,
+         element: (
+           <PrivateRoute>
+             <AddJobs></AddJobs>
+           </PrivateRoute>
+         ),
        },
        {
          path: "/myAcceptedTasks",
-         element: <MyAcceptedTasks></MyAcceptedTasks>,
+         element: (
+           <PrivateRoute>
+             <MyAcceptedTasks></MyAcceptedTasks>
+           </PrivateRoute>
+         ),
+       },
+       {
+         path: "/myAddedJobs",
+         element: (
+           <PrivateRoute>
+             <MyAddedJobs></MyAddedJobs>
+           </PrivateRoute>
+         ),
        },
      ],
    },
 
    {
      path: "/auth",
-     Component: AuthLayout,
+     element:<AuthLayout></AuthLayout>,
      children: [
        {
          path: "/auth/login",

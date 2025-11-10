@@ -5,7 +5,7 @@ const JobCard = ({ job }) => {
   const navigate = useNavigate();
 
   const handleViewDetails = () => {
-    navigate(`/allJobs/${job._id}`); 
+    navigate(`/jobDetails/${job._id}`); 
   };
 
   return (

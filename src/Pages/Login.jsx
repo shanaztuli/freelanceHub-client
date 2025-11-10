@@ -16,7 +16,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
- 
+ console.log(location);
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -33,10 +33,11 @@ const Login = () => {
       
         toast.success("You Login Successfully!", user);
         
-        navigate(`${location.state ? location.state : "/"}`);
+       navigate(location?.state?.from?.pathname || "/");
       })
       .catch((error) => {
-        toast('something went wrong',error);
+        console.log(error);
+        toast('Please check the email and password');
       });
   };
   
@@ -47,7 +48,7 @@ const Login = () => {
          setUser(loggedInUser);
          toast("You Login Successfully", result.user);
 
-         navigate(`${location.state ? location.state : "/"}`);
+         navigate(location?.state?.from?.pathname || "/");
        })
        .catch((error) => {
          toast(error.message);
