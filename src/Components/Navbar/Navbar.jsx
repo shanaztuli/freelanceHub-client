@@ -13,31 +13,31 @@ const { user, logOut, loading } = use(AuthContext);
 
   const links = (
     <>
-      <li className="ml-2">
+      <li className="ml-2 font-bold">
         <NavLink
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "text-blue-200 font-semibold bg-blue-600 rounded-[5px] "
+              ? "text-blue-200 font-semibold bg-blue-600 rounded-[5px]  "
               : ""
           }
         >
           Home
         </NavLink>
       </li>
-      <li className="ml-2">
+      <li className="ml-2 font-bold">
         <NavLink
           to={"/allJobs"}
           className={({ isActive }) =>
             isActive
-              ? "text-blue-200 font-semibold bg-blue-600 rounded-[5px] "
+              ? "text-blue-200  font-semibold bg-blue-600 rounded-[5px] "
               : ""
           }
         >
           All Jobs
         </NavLink>
       </li>
-      <li className="ml-2">
+      <li className="ml-2 font-bold">
         <NavLink
           to={"/addJobs"}
           className={({ isActive }) =>
@@ -49,7 +49,7 @@ const { user, logOut, loading } = use(AuthContext);
           Add Jobs
         </NavLink>
       </li>
-      <li className="ml-2">
+      <li className="ml-2 font-bold">
         <NavLink
           to={"/myAcceptedTasks"}
           className={({ isActive }) =>
@@ -137,7 +137,7 @@ const { user, logOut, loading } = use(AuthContext);
               {" "}
               Login
             </Link>
-            <Link to="/auth/register" className="btn ml-2  ">
+            <Link to="/auth/register" className="btn ml-2 bg-base-200 font-bold ">
               {" "}
               Register
             </Link>

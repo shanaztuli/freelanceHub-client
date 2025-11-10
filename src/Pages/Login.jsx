@@ -55,7 +55,7 @@ const Login = () => {
 
 
     return (
-      <div className="flex justify-center my-4 items-center min-h-screen ">
+      <div className="flex justify-center my-4 items-center  ">
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
           <h1 className="font-semibold text text-2xl text-center">
             Login your account
@@ -93,7 +93,7 @@ const Login = () => {
                 </span>
               </div>
 
-            
+            <div >Forget Password?</div>
 
               <button
                 type="submit"
