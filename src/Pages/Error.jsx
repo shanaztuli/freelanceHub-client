@@ -5,7 +5,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Footer from "../Components/Footer/Footer";
 const Error = () => {
   return (
-    <div className="max-w-[1250px] mx auto ">
+    <div className="max-w-[1400px] mx-auto">
       <Navbar></Navbar>
       <img className="block mx-auto" src={errorImg} alt="" />
 

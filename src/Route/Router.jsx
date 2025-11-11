@@ -12,7 +12,6 @@ import Login from "../Pages/Login";
 import NotFound from "../Pages/Error";
 import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
 import JobDetails from "../Pages/JobDetails";
-import MyAddedJobs from "../Pages/MyAddedJobs";
 import Error from "../Pages/Error";
 
  export const router = createBrowserRouter([
@@ -62,7 +61,7 @@ import Error from "../Pages/Error";
          path: "/myAddedJobs",
          element: (
            <PrivateRoute>
-             <MyAddedJobs></MyAddedJobs>
+            <MyPostedJobs></MyPostedJobs>
            </PrivateRoute>
          ),
        },

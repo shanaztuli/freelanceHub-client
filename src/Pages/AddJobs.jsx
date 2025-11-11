@@ -16,8 +16,8 @@ const AddJobs = () => {
     const summary = form.summary.value;
     const coverImage = form.coverImage.value;
    const postedDate = new Date().toISOString();
-   const postedBy = user?.displayName;
-   const userEmail = user?.email;
+     const postedBy = form.postedBy.value;
+    const userEmail = form.userEmail.value;
      const formData={
         title,category,summary,coverImage,postedDate,postedBy,userEmail
     }
@@ -66,6 +66,19 @@ fetch("http://localhost:5001/jobs", {
               className="input w-full rounded-xl border-gray-300 focus:ring-2 focus:ring-blue-400"
             />
           </div>
+          {/* posted by */}
+          <div>
+            <label className="label font-semibold text-gray-700">
+              Posted By
+            </label>
+            <input
+              type="text"
+              name="postedBy"
+              defaultValue={user?.displayName || ""}
+              placeholder="Enter your name"
+              className="input w-full rounded-xl border-gray-300 focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
 
           {/* Category Dropdown */}
           <div>
@@ -108,13 +121,11 @@ fetch("http://localhost:5001/jobs", {
           {/* user email */}
 
           <div>
-            <label className="label font-semibold text-gray-700">
-               Email
-            </label>
+            <label className="label font-semibold text-gray-700">Email</label>
             <input
               type="email"
               name="userEmail"
-            
+              defaultValue={user?.email || ""}
               placeholder="Enter your email"
               className="input w-full rounded-xl border-gray-300 focus:ring-2 focus:ring-blue-400"
             />
