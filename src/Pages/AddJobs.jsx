@@ -1,9 +1,10 @@
 import React, { use } from "react";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import { toast } from "react-toastify";
+import Spinner from "../Components/Spinner.jsx/Spinner";
 
 const AddJobs = () => {
-    const {user} = use(AuthContext)
+    const {user,loading} = use(AuthContext)
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -34,6 +35,15 @@ fetch("http://localhost:5001/jobs", {
    
     form.reset();
   };
+
+ if (loading) {
+   return (
+     <div className="text-center mt-10">
+       <Spinner></Spinner>
+     </div>
+   );
+ }
+
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-10 px-4">

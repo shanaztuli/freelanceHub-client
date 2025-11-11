@@ -9,10 +9,11 @@ import MyPostedJobs from "../Pages/MyPostedJobs";
 import AddJobs from "../Pages/AddJobs";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
-import NotFound from "../Pages/NotFound";
+import NotFound from "../Pages/Error";
 import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
 import JobDetails from "../Pages/JobDetails";
 import MyAddedJobs from "../Pages/MyAddedJobs";
+import Error from "../Pages/Error";
 
  export const router = createBrowserRouter([
    {
@@ -84,7 +85,7 @@ import MyAddedJobs from "../Pages/MyAddedJobs";
    },
    {
      path: "/*",
-     element: <NotFound></NotFound>,
+     element:<Error></Error>,
    },
  ]);
 

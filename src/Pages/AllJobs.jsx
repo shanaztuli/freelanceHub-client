@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { use } from 'react';
 import { useLoaderData } from 'react-router';
 import JobCard from '../Components/JobCard';
+import { AuthContext } from '../AuthContext/AuthProvider';
+import Spinner from '../Components/Spinner.jsx/Spinner';
 
 const AllJobs = () => {
+    const{loading}= use(AuthContext);
+ if (loading) {
+   return (
+     <div className="text-center mt-10">
+       <Spinner></Spinner>
+     </div>
+   );
+ }
     const data = useLoaderData();
     console.log(data);
     return (
