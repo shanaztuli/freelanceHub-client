@@ -73,21 +73,21 @@ const JobDetails = () => {
             <span className="badge badge-lg bg-blue-200 text-blue-700 font-semibold px-4 py-2 rounded-full">
               {job.category}
             </span>
-            <span className="text-gray-500">
+            <span className="">
               Posted by{" "}
-              <span className="font-semibold text-gray-800">
+              <span className="font-semibold text-gray-400">
                 {job.postedBy}
               </span>
             </span>
-            <span className="text-gray-400 text-sm">
+            <span className=" text-sm">
               {new Date(job.postedDate).toLocaleString()}
             </span>
           </div>
 
-          <p className="text-gray-700 text-lg leading-relaxed">{job.summary}</p>
+          <p className=" text-lg leading-relaxed">{job.summary}</p>
 
           {/* Contact Info */}
-          <div className="bg-gray-100 p-5 rounded-2xl">
+          <div className="bg-gray-200 p-5 rounded-2xl">
             <h3 className="text-xl font-semibold mb-2 text-gray-800">
               Job Information
             </h3>

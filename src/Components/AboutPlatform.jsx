@@ -19,7 +19,7 @@ const AboutPlatform = () => {
     
         <div className="md:w-1/2 flex flex-col gap-6 mx-3">
           <h2 className="text-4xl text font-bold">About Freelance Hub</h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-300 text-lg">
             Freelance Hub is a cutting-edge online marketplace that connects
             talented freelancers with clients seeking high-quality services
             across multiple industries. Whether you need a skilled web

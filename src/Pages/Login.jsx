@@ -110,7 +110,7 @@ const Login = () => {
               <button
               
                 onClick={handleGoogleSignIn}
-                className="btn bg-linear-to-r from-[#f4f3f1] to-[#f8f1e6]  btn-outline w-full"
+                className="btn bg-linear-to-r from-[#f8f4ea] to-[#e0d9ce]  btn-outline w-full"
               >
                 <FcGoogle size={24} /> Login with Google
               </button>

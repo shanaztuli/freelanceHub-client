@@ -32,7 +32,7 @@ const handleRemove = (id)=>{
         </h2>
 
         {tasks.length === 0 ? (
-          <p className="text-center text-gray-500 text-xl">
+          <p className="text-center text-gray-200 text-xl">
             No accepted tasks yet.
           </p>
         ) : (
@@ -40,7 +40,7 @@ const handleRemove = (id)=>{
             {tasks.map((task) => (
               <div
                 key={task._id}
-                className="border flex items-center justify-between rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow bg-white"
+                className="border flex items-center justify-between rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow "
               >
                 <div className="flex items-center gap-4">
                   <img
@@ -49,10 +49,10 @@ const handleRemove = (id)=>{
                     className="h-20 w-28 object-cover rounded-lg"
                   />
                   <div className="space-y-1">
-                    <h3 className="font-semibold text-lg text-gray-800">
+                    <h3 className="font-semibold text-lg">
                       {task.title}
                     </h3>
-                    <p className="text-gray-500 text-sm">{task.category}</p>
+                    <p className="text-gray-400 text-sm">{task.category}</p>
                   </div>
                 </div>
 

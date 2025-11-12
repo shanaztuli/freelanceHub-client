@@ -13,7 +13,7 @@ const Home = () => {
         <h1 className="text text-center font-bold text-3xl my-3 mt-4 ">
           All Latest Jobs{" "}
         </h1>
-        <p className="text-center text-lg md:text-xl text-gray-700 mb-6">
+        <p className="text-center text-lg md:text-xl  mb-6 mx-2 md:mx-0">
           Stay ahead with the newest job opportunities on our platform! Discover
           the latest freelance projects, explore diverse categories, and connect
           with top employers to kickstart your next exciting venture.

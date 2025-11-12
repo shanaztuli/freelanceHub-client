@@ -46,16 +46,16 @@ fetch("http://localhost:5001/jobs", {
 
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center py-10 px-4">
-      <div className="bg-white shadow-2xl rounded-3xl w-full max-w-2xl p-8 md:p-12">
-        <h2 className="text-3xl font-bold text-center mb-8 text-blue-600">
+    <div className="min-h-screen  flex flex-col justify-center items-center py-10 px-4">
+      <div className=" shadow-2xl rounded-3xl w-full max-w-2xl p-8 md:p-12">
+        <h2 className="text-3xl font-bold text-center mb-8 text-blue-500">
           Add New Job
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Job Title */}
           <div>
-            <label className="label font-semibold text-gray-700">
+            <label className="label font-semibold ">
               Job Title
             </label>
             <input
@@ -68,7 +68,7 @@ fetch("http://localhost:5001/jobs", {
           </div>
           {/* posted by */}
           <div>
-            <label className="label font-semibold text-gray-700">
+            <label className="label font-semibold ">
               Posted By
             </label>
             <input
@@ -82,7 +82,7 @@ fetch("http://localhost:5001/jobs", {
 
           {/* Category Dropdown */}
           <div>
-            <label className="label font-semibold text-gray-700">
+            <label className="label font-semibold ">
               Category
             </label>
             <select
@@ -107,7 +107,7 @@ fetch("http://localhost:5001/jobs", {
 
           {/* Job Summary */}
           <div>
-            <label className="label font-semibold text-gray-700">
+            <label className="label font-semibold ">
               Job Summary
             </label>
             <textarea
@@ -121,7 +121,7 @@ fetch("http://localhost:5001/jobs", {
           {/* user email */}
 
           <div>
-            <label className="label font-semibold text-gray-700">Email</label>
+            <label className="label font-semibold ">Email</label>
             <input
               type="email"
               name="userEmail"
@@ -133,7 +133,7 @@ fetch("http://localhost:5001/jobs", {
 
           {/* Cover Image URL */}
           <div>
-            <label className="label font-semibold text-gray-700">
+            <label className="label font-semibold ">
               Cover Image URL
             </label>
             <input

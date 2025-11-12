@@ -101,7 +101,7 @@ const handleUpdate = ()=>{
               >
                 <div>
                   <h3 className="font-semibold text-lg">{job.title}</h3>
-                  <p className="text-gray-600">{job.category}</p>
+                  <p className="text-gray-300">{job.category}</p>
                 </div>
                 <div className="flex gap-2">
                   <button
@@ -125,8 +125,8 @@ const handleUpdate = ()=>{
         {/* Update Modal */}
         {updatingJob && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white rounded-xl p-6 w-full max-w-md">
-              <h2 className="text-xl font-bold mb-4">Update Job</h2>
+            <div className="border-blue-600 border-2 rounded-xl p-6 w-full max-w-md">
+              <h2 className="text-xl text-white  font-bold mb-4">Update Job</h2>
               <input
                 type="text"
                 name="title"
