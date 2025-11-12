@@ -27,7 +27,7 @@ fetch("http://localhost:5001/jobs", {
     "Content-Type": "application/json",
   },body:JSON.stringify(formData)
 }).then(res=>res.json()).then(data=>{
-    console.log(data)
+    // console.log(data)
     toast('You sussceefully added The Job');
 }).catch(error =>{
     toast('Please Make sure you provided all Information correctly' ,   error);

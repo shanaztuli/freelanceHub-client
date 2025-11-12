@@ -11,7 +11,7 @@ const MyAcceptedTasks = () => {
 useEffect(()=>{
 
     fetch(`http://localhost:5001/acceptedTasks?email=${user?.email}`).then(res=>res.json()).then(data=>{
-        console.log(data);
+        // console.log(data);
         setTasks(data);
     })
 },[user]);

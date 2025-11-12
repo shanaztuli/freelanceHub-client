@@ -16,7 +16,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
- console.log(location);
+//  console.log(location);
   const handleSignIn = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,7 +27,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
 
-        console.log(user);
+        // console.log(user);
         setUser(user);
         e.target.reset();
       
@@ -36,7 +36,7 @@ const Login = () => {
        navigate(location?.state?.from?.pathname || "/");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         toast('Please check the email and password');
       });
   };

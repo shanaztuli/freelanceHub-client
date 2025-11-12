@@ -22,7 +22,7 @@ const MyPostedJobs = () => {
     fetch(
       `http://localhost:5001/myjobs?email=${user.email}`
     ).then(res=>res.json()).then(data=> setJobs(data)).catch(err=>{
-        console.log(err);
+        // console.log(err);
     })
    }
     },[user]);
@@ -51,14 +51,14 @@ const handleUpdate = ()=>{
         body:JSON.stringify(updateForm),
     }).then(res=>res.json()).then(data=>{
 
-        console.log(data);
+        // console.log(data);
         const updatedJobs = jobs.map(job=>job._id == updatingJob._id ? {...job,...updateForm}: job);
         setJobs(updatedJobs);
         setUpdatingJob(null);
          Swal.fire("Success", "Job updated successfully!", "success");
 
     }).catch(err=>{
-        console.error(err);
+        // console.error(err);
     })
 }
 

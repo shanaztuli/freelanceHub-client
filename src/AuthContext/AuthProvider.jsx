@@ -23,7 +23,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(user);
+  // console.log(user);
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -34,7 +34,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logIn = (email, password) => {
-    console.log(email,password);
+    // console.log(email,password);
     return signInWithEmailAndPassword(auth, email, password);
   };
 

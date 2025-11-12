@@ -42,12 +42,12 @@ const JobDetails = () => {
     body: JSON.stringify(acceptedJob),
   })
     .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
+    .then(() => {
+      // console.log(data);
       toast.success("You have accepted this job");
     })
-    .catch((err) => {
-      console.log(err);
+    .catch(() => {
+      // console.log(err);
       toast.error("something Went wrong");
     });
  }
