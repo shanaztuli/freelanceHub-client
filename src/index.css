@@ -1,12 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-@plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  --color-primary: #632EE3;
-  --color-secondary: teal;
-}  
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+ 
 
 .btn-primary {
   @apply bg-gradient-to-r from-[hsl(251,84%,66%)] via-[#2a59d9] to-[#155dfc] 

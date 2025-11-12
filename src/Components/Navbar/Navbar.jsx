@@ -7,9 +7,18 @@ import { toast } from "react-toastify";
 import userLogo from '../../assets/user.png'
 
 const Navbar = () => {
-const { user, logOut, loading } = use(AuthContext);
+const { user, logOut,} = use(AuthContext);
 
 
+const handleTheme =(checked)=>{
+  const html = document.querySelector('html');
+  if(checked){
+    html.setAttribute('data-theme','dark')
+  }else {
+    html.setAttribute('data-theme', 'light')
+  }
+
+}
 
   const links = (
     <>
@@ -63,7 +72,7 @@ const { user, logOut, loading } = use(AuthContext);
               My Accepted Tasks
             </NavLink>
           </li>
-          <li className="ml-2 font-bold">
+          <li className="ml-2 md:ml-5 font-bold">
             <NavLink
               to={"/myAddedJobs"}
               className={({ isActive }) =>
@@ -77,6 +86,15 @@ const { user, logOut, loading } = use(AuthContext);
           </li>
         </>
       )}
+
+      <div className=" md:hidden block ml-4">
+        <input
+          onChange={(e) => handleTheme(e.target.checked)}
+          type="checkbox"
+          defaultChecked={localStorage.getItem("theme") === "dark"}
+          className="toggle mr-2"
+        />
+      </div>
     </>
   );
   const handleLogOut = () => {
@@ -130,6 +148,15 @@ const { user, logOut, loading } = use(AuthContext);
         <ul className="menu menu-horizontal px-1 ml-5 gap-x-6">{links}</ul>
       </div>
       <div className="navbar-end">
+        <div className=" hidden md:block">
+          <input
+            onChange={(e) => handleTheme(e.target.checked)}
+            type="checkbox"
+            defaultChecked={localStorage.getItem("theme") === "dark"}
+            className="toggle mr-2"
+          />
+        </div>
+
         {user && (
           <img
             className="w-13 h-13 mr-2 rounded-full"
@@ -151,7 +178,10 @@ const { user, logOut, loading } = use(AuthContext);
               {" "}
               Login
             </Link>
-            <Link to="/auth/register" className="btn ml-2 bg-base-200 font-bold ">
+            <Link
+              to="/auth/register"
+              className="btn ml-2 bg-base-200 font-bold "
+            >
               {" "}
               Register
             </Link>
