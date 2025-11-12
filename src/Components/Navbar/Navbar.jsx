@@ -1,23 +1,25 @@
-import React from "react";
-import { Link, Navigate, NavLink, useNavigate } from "react-router";
+import React, { useEffect, useState } from "react";
+import { Link, Navigate, NavLink,  } from "react-router";
 import logo from '/logos.png'
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { use } from "react";
 import { toast } from "react-toastify";
-import userLogo from '../../assets/user.png'
 
 const Navbar = () => {
 const { user, logOut,} = use(AuthContext);
+const [theme,setTheme]= useState(localStorage.getItem('theme') || 'light');
 
+useEffect(()=>{
+  const html = document.querySelector("html");
+  html.setAttribute("data-theme", theme);
+localStorage.setItem('theme',theme)
+
+
+},[theme])
 
 const handleTheme =(checked)=>{
-  const html = document.querySelector('html');
-  if(checked){
-    html.setAttribute('data-theme','dark')
-  }else {
-    html.setAttribute('data-theme', 'light')
-  }
-
+   
+setTheme(checked? 'dark' : 'light')
 }
 
   const links = (
