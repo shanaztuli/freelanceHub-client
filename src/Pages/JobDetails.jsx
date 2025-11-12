@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import Spinner from "../Components/Spinner.jsx/Spinner";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const JobDetails = () => {
   const job = useLoaderData();
@@ -20,6 +21,11 @@ const JobDetails = () => {
 
 
  const handleAcceptJob = ()=>{
+
+   if (job.userEmail === user.email) {
+     Swal.fire("Oops!", "You cannot accept your own job.", "warning");
+     return;
+   }
   const acceptedJob = {
     jobId:job._id,
     title:job.title,

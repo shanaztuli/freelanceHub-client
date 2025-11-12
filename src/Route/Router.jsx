@@ -9,10 +9,10 @@ import MyPostedJobs from "../Pages/MyPostedJobs";
 import AddJobs from "../Pages/AddJobs";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
-import NotFound from "../Pages/Error";
 import MyAcceptedTasks from "../Pages/MyAcceptedTasks";
 import JobDetails from "../Pages/JobDetails";
 import Error from "../Pages/Error";
+import Spinner from "../Components/Spinner.jsx/Spinner";
 
  export const router = createBrowserRouter([
    {
@@ -21,17 +21,20 @@ import Error from "../Pages/Error";
      children: [
        {
          index: true,
+         hydrateFallbackElement: <Spinner></Spinner>,
          loader: () => fetch("http://localhost:5001/latest-jobs"),
 
-       element:<Home></Home>
+         element: <Home></Home>,
        },
        {
          path: "/allJobs",
+         hydrateFallbackElement: <Spinner></Spinner>,
          loader: () => fetch("http://localhost:5001/jobs"),
-        element:<AllJobs></AllJobs>
+         element: <AllJobs></AllJobs>,
        },
        {
          path: "/jobDetails/:id",
+         hydrateFallbackElement: <Spinner></Spinner>,
          loader: ({ params }) =>
            fetch(`http://localhost:5001/jobs/${params.id}`),
          element: (
@@ -61,7 +64,7 @@ import Error from "../Pages/Error";
          path: "/myAddedJobs",
          element: (
            <PrivateRoute>
-            <MyPostedJobs></MyPostedJobs>
+             <MyPostedJobs></MyPostedJobs>
            </PrivateRoute>
          ),
        },
@@ -70,7 +73,7 @@ import Error from "../Pages/Error";
 
    {
      path: "/auth",
-     element:<AuthLayout></AuthLayout>,
+     element: <AuthLayout></AuthLayout>,
      children: [
        {
          path: "/auth/login",
@@ -84,7 +87,7 @@ import Error from "../Pages/Error";
    },
    {
      path: "/*",
-     element:<Error></Error>,
+     element: <Error></Error>,
    },
  ]);
 
