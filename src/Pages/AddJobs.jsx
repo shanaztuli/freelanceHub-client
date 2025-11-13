@@ -4,46 +4,53 @@ import { toast } from "react-toastify";
 import Spinner from "../Components/Spinner.jsx/Spinner";
 
 const AddJobs = () => {
-    const {user,loading} = use(AuthContext)
+  const { user, loading } = use(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
-   
     const form = e.target;
     const title = form.title.value;
     const category = form.category.value;
     const summary = form.summary.value;
     const coverImage = form.coverImage.value;
-   const postedDate = new Date().toISOString();
-     const postedBy = form.postedBy.value;
+    const postedDate = new Date().toISOString();
+    const postedBy = form.postedBy.value;
     const userEmail = form.userEmail.value;
-     const formData={
-        title,category,summary,coverImage,postedDate,postedBy,userEmail
-    }
-fetch("http://localhost:5001/jobs", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },body:JSON.stringify(formData)
-}).then(res=>res.json()).then(data=>{
-    // console.log(data)
-    toast('You sussceefully added The Job');
-}).catch(error =>{
-    toast('Please Make sure you provided all Information correctly' ,   error);
-})
-   
+    const formData = {
+      title,
+      category,
+      summary,
+      coverImage,
+      postedDate,
+      postedBy,
+      userEmail,
+    };
+    fetch("https://freelance-hub-server-ebon.vercel.app/jobs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data)
+        toast("You sussceefully added The Job");
+      })
+      .catch((error) => {
+        toast("Please Make sure you provided all Information correctly", error);
+      });
+
     form.reset();
   };
 
- if (loading) {
-   return (
-     <div className="text-center mt-10">
-       <Spinner></Spinner>
-     </div>
-   );
- }
-
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <Spinner></Spinner>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen  flex flex-col justify-center items-center py-10 px-4">
@@ -55,9 +62,7 @@ fetch("http://localhost:5001/jobs", {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Job Title */}
           <div>
-            <label className="label font-semibold ">
-              Job Title
-            </label>
+            <label className="label font-semibold ">Job Title</label>
             <input
               type="text"
               name="title"
@@ -68,9 +73,7 @@ fetch("http://localhost:5001/jobs", {
           </div>
           {/* posted by */}
           <div>
-            <label className="label font-semibold ">
-              Posted By
-            </label>
+            <label className="label font-semibold ">Posted By</label>
             <input
               type="text"
               name="postedBy"
@@ -82,9 +85,7 @@ fetch("http://localhost:5001/jobs", {
 
           {/* Category Dropdown */}
           <div>
-            <label className="label font-semibold ">
-              Category
-            </label>
+            <label className="label font-semibold ">Category</label>
             <select
               name="category"
               required
@@ -107,9 +108,7 @@ fetch("http://localhost:5001/jobs", {
 
           {/* Job Summary */}
           <div>
-            <label className="label font-semibold ">
-              Job Summary
-            </label>
+            <label className="label font-semibold ">Job Summary</label>
             <textarea
               name="summary"
               rows="5"
@@ -133,9 +132,7 @@ fetch("http://localhost:5001/jobs", {
 
           {/* Cover Image URL */}
           <div>
-            <label className="label font-semibold ">
-              Cover Image URL
-            </label>
+            <label className="label font-semibold ">Cover Image URL</label>
             <input
               type="url"
               name="coverImage"

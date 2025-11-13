@@ -9,48 +9,46 @@ import Swal from "sweetalert2";
 
 const JobDetails = () => {
   const job = useLoaderData();
-  const {user,loading} = use(AuthContext);
+  const { user, loading } = use(AuthContext);
 
- if (loading) {
-   return (
-     <div className="text-center mt-10">
-       <Spinner></Spinner>
-     </div>
-   );
- }
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <Spinner></Spinner>
+      </div>
+    );
+  }
 
-
- const handleAcceptJob = ()=>{
-
-   if (job.userEmail === user.email) {
-     Swal.fire("Oops!", "You cannot accept your own job.", "warning");
-     return;
-   }
-  const acceptedJob = {
-    jobId:job._id,
-    title:job.title,
-    category:job.category,
-    postedBy:job.postedBy,
-    summary:job.summary,
-    coverImage:job.coverImage,
-    acceptedBy: user?.email,
-    acceptedDate : new Date().toISOString()
-  };
-  fetch("http://localhost:5001/acceptedTasks", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(acceptedJob),
-  })
-    .then((res) => res.json())
-    .then(() => {
-      // console.log(data);
-      toast.success("You have accepted this job");
+  const handleAcceptJob = () => {
+    if (job.userEmail === user.email) {
+      Swal.fire("Oops!", "You cannot accept your own job.", "warning");
+      return;
+    }
+    const acceptedJob = {
+      jobId: job._id,
+      title: job.title,
+      category: job.category,
+      postedBy: job.postedBy,
+      summary: job.summary,
+      coverImage: job.coverImage,
+      acceptedBy: user?.email,
+      acceptedDate: new Date().toISOString(),
+    };
+    fetch("https://freelance-hub-server-ebon.vercel.app/acceptedTasks", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(acceptedJob),
     })
-    .catch(() => {
-      // console.log(err);
-      toast.error("something Went wrong");
-    });
- }
+      .then((res) => res.json())
+      .then(() => {
+        // console.log(data);
+        toast.success("You have accepted this job");
+      })
+      .catch(() => {
+        // console.log(err);
+        toast.error("something Went wrong");
+      });
+  };
 
   return (
     <div className="min-h-screen border-2 border-gray-400  py-10 px-4 flex justify-center items-center">
@@ -121,10 +119,12 @@ const JobDetails = () => {
               Back to All Jobs
             </Link>
 
-            <button onClick={handleAcceptJob} className="btn btn-primary rounded-full px-6 py-3 hover:from-blue-600 hover:to-indigo-700">
+            <button
+              onClick={handleAcceptJob}
+              className="btn btn-primary rounded-full px-6 py-3 hover:from-blue-600 hover:to-indigo-700"
+            >
               Accept Job
             </button>
-           
           </div>
         </div>
       </div>

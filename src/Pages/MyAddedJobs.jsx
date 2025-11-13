@@ -19,7 +19,7 @@
 //   //
 //   useEffect(() => {
 //     if (user?.email) {
-//       fetch(`http://localhost:5001/myjobs?email=${user.email}`)
+//       fetch(`https://freelance-hub-server-ebon.vercel.app/myjobs?email=${user.email}`)
 //         .then((res) => res.json())
 //         .then((data) => setJobs(data))
 //         .catch((err) => {
@@ -46,7 +46,7 @@
 
 //   //update
 //   const handleUpdate = () => {
-//     fetch(`http://localhost:5001/jobs/${updatingJob._id}`, {
+//     fetch(`https://freelance-hub-server-ebon.vercel.app/jobs/${updatingJob._id}`, {
 //       method: "PUT",
 //       headers: { "Content-Type": "application/json" },
 //       body: JSON.stringify(updateForm),
