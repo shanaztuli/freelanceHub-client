@@ -13,12 +13,8 @@ const AuthLayout = () => {
         <header>
           <Navbar></Navbar>
         </header>
-        <main className="px-4 md:px-0 md:pb-8  md:flex-1 bg-base-200">
-          {state == "loading" ? (
-            <Spinner></Spinner>
-          ) : (
-            <Outlet></Outlet>
-          )}
+        <main className="px-4 md:px-0 md:pb-8  md:flex-1 bg-base-200  pt-16">
+          {state == "loading" ? <Spinner></Spinner> : <Outlet></Outlet>}
         </main>
         <footer>
           <Footer></Footer>

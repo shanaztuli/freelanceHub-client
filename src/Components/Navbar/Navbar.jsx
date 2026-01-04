@@ -1,26 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { Link, Navigate, NavLink,  } from "react-router";
-import logo from '/logos.png'
+import { Link, Navigate, NavLink } from "react-router";
+import logo from "/logos.png";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { use } from "react";
 import { toast } from "react-toastify";
 
 const Navbar = () => {
-const { user, logOut,} = use(AuthContext);
-const [theme,setTheme]= useState(localStorage.getItem('theme') || 'light');
+  const { user, logOut } = use(AuthContext);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
-useEffect(()=>{
-  const html = document.querySelector("html");
-  html.setAttribute("data-theme", theme);
-localStorage.setItem('theme',theme)
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
-
-},[theme])
-
-const handleTheme =(checked)=>{
-   
-setTheme(checked? 'dark' : 'light')
-}
+  const handleTheme = (checked) => {
+    setTheme(checked ? "dark" : "light");
+  };
 
   const links = (
     <>
@@ -103,19 +100,19 @@ setTheme(checked? 'dark' : 'light')
     logOut()
       .then(() => {
         toast("You signed out");
-        Navigate('/');
+        Navigate("/");
       })
       .catch();
   };
- 
+
   return (
-    <div className="navbar bg-base-100 shadow-sm ">
+    <div className="navbar navbar-bg fixed top-0 left-0 z-50 w-full shadow-md">
       <div className="navbar-start">
         <div className="dropdown z-20">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -147,7 +144,9 @@ setTheme(checked? 'dark' : 'light')
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 ml-5 gap-x-6">{links}</ul>
+        <ul className="menu menu-horizontal px-1 ml-5 gap-x-6 text-white">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end">
         <div className=" hidden md:block">
@@ -169,20 +168,22 @@ setTheme(checked? 'dark' : 'light')
         )}
         {user ? (
           <>
-            <button onClick={handleLogOut} className="btn btn-primary">
+            <button onClick={handleLogOut} className="padding btn-primary">
               {" "}
               Logout
             </button>
           </>
         ) : (
           <>
-            <Link to="/auth/login" className="btn btn-primary ">
+            <Link to="/auth/login" className="btn-primary padding">
               {" "}
               Login
             </Link>
             <Link
               to="/auth/register"
-              className="btn ml-2 bg-base-200 font-bold "
+              className="ml-2 padding border border-gray-300 rounded-md font-semibold text-white  transition-all 
+     duration-200
+    hover:bg-[#eceefe] hover:text-black"
             >
               {" "}
               Register

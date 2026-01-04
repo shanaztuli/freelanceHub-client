@@ -53,7 +53,7 @@ const AddJobs = () => {
   }
 
   return (
-    <div className="min-h-screen  flex flex-col justify-center items-center py-10 px-4">
+    <div className="min-h-screen  flex flex-col justify-center items-center py-10 px-4 max-w-[1400px] mx-auto">
       <div className=" shadow-2xl rounded-3xl w-full max-w-2xl p-8 md:p-12">
         <h2 className="text-3xl font-bold text-center mb-8 text-blue-500">
           Add New Job

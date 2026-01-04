@@ -37,7 +37,7 @@ const JobCard = ({ job }) => {
         {/* View Details */}
         <button
           onClick={handleViewDetails}
-          className="self-start btn-primary  px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold"
+          className="self-start btn-primary  px-4 py-2  "
         >
           View Details
         </button>

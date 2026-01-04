@@ -10,10 +10,12 @@
  
 
 .btn-primary {
-  @apply bg-gradient-to-r from-[hsl(251,84%,66%)] via-[#2a59d9] to-[#155dfc] 
-         text-white font-medium border-none 
+  @apply  bg-gradient-to-r
+    from-[#4F5FE3]
+    to-[#7889f7]
+         text-white font-medium border-none rounded-md
          shadow-md hover:shadow-lg transition-all duration-300 
-         hover:from-[#1e40af] hover:via-[#1e3a8a] hover:to-[#172554];
+        hover:from-[#2F3FB8] hover:to-[#4c64e0]
 }
 
 .text {
@@ -23,3 +25,16 @@
 .btn-primary:hover{
   @apply opacity-90;
 }
+
+.padding{
+   @apply   px-4 py-2 
+}
+.navbar-bg {
+  @apply bg-black
+}
+
+
+
+
+
+

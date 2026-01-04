@@ -8,18 +8,16 @@ import Spinner from "../Components/Spinner.jsx/Spinner";
 const RootLayouts = () => {
   const {state} = useNavigation;
   return (
-    <div className="flex flex-col min-h-screen max-w-[1400px] mx-auto">
-      <header>
+    <div className="flex flex-col min-h-screen overflow-visible">
+      <header className="w-full">
         <Navbar></Navbar>
       </header>
-      <main className="flex-1">
-        {state == "loading" ? (
-          <Spinner></Spinner>
-        ) : (
-          <Outlet></Outlet>
-        )}
-      </main>
-      <footer>
+      <div className="flex flex-col min-h-screen  overflow-visible ">
+        <main className="flex-1  pt-16">
+          {state == "loading" ? <Spinner></Spinner> : <Outlet></Outlet>}
+        </main>
+      </div>
+      <footer className="w-full">
         <Footer></Footer>
       </footer>
       <ToastContainer></ToastContainer>

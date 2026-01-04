@@ -14,10 +14,10 @@ const AllJobs = () => {
      </div>
    );
  }
-  
+ 
     // console.log(data);
     return (
-      <div className="py-3">
+      <div className="py-3  max-w-[1400px] mx-auto">
         <h1 className="text text-center font-bold text-3xl mb-3 ">
           All Available Jobs{" "}
         </h1>

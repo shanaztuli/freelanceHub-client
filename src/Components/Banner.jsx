@@ -36,13 +36,13 @@ const Banner = () => {
           >
             <button
               onClick={() => navigate("/addJobs")}
-              className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition-transform"
+              className="bg-white text-blue-600 font-semibold padding rounded-lg shadow-lg hover:scale-105 transition-transform"
             >
               Create a Job
             </button>
             <button
               onClick={() => navigate("/allJobs")}
-              className="border btn-primary border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              className="btn-primary padding "
             >
               Explore Jobs
             </button>

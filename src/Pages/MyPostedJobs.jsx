@@ -96,7 +96,7 @@ const MyPostedJobs = () => {
   };
 
   return (
-    <div className="py-6 px-4">
+    <div className="py-6 px-4 max-w-[1400px] mx-auto">
       <h1 className="text-center font-bold text-3xl text mb-4">
         My Posted Jobs
       </h1>
